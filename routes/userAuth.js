@@ -44,7 +44,7 @@ router.post(
       const data = {
         user: { id: user.id },
       };
-      const authtoken = jwt.sign(data, JWT_SECRETKEY);
+      const authtoken = jwt.sign(data , jwtSecretKey);
       success = true;
       res.json({ success, authtoken });
     } catch (err) {
@@ -83,7 +83,7 @@ router.post('/login', [
         id: user.id
       }
     };
-    const authtoken = jwt.sign(data, JWT_SECRETKEY);
+    const authtoken = jwt.sign(data ,jwtSecretKey);
     success = true;
     res.json({ success, authtoken });
   } catch (error) {

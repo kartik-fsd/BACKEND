@@ -11,6 +11,7 @@ var cors = require('cors')
 app.use(cors())
 
 app.use('/task/auth',require("./routes/userAuth"));
+app.use('/api/teams',require("./routes/team"));
 
 app.use(express.json())
 

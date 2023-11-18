@@ -4,7 +4,6 @@ const { JWT_SECRETKEY } = process.env; // Load JWT secret key from environment v
 
 const fetchUser = (req, res, next) => {
   const token = req.header('auth-token');
-
   try {
     if (!token) {
       return res.status(401).json({ error: "Please authenticate using a valid token" });
