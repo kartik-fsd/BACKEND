@@ -11,7 +11,10 @@ var cors = require('cors')
 app.use(cors())
 
 app.use('/task/auth',require("./routes/userAuth"));
-app.use('/api/teams',require("./routes/team"));
+app.use('/teams',require("./routes/team"));
+app.use('/team' , require('./routes/taskManagement'));
+app.use('/search',require('./routes/fetchTeam'))
+app.use('/team_',require('./routes/fetchMemebers'))
 
 app.use(express.json())
 

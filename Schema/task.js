@@ -16,7 +16,7 @@ const taskSchema = new mongoose.Schema({
     },
     assingedTo : {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'Team'
     },
     status:{
         type : String,

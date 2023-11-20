@@ -74,9 +74,6 @@ router.post('/create_team', fetchUser, async (req, res) => {
   }
 });
 
-
-
-
 // Route to promote a member to admin within a team
 router.put('/:teamId/promote/:userId', async (req, res) => {
   try {
